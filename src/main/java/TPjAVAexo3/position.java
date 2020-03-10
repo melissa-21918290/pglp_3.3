@@ -12,11 +12,11 @@ public class position {
 	}
 
 	protected void deplaceX(int nbCases) {
-		this.x=this.x+nbCase;
+		this.x=this.x+nbCases;
 	}
 	
 	protected void deplaceY(int nbCases) {
-		this.y=this.y+nbCase;
+		this.y=this.y+nbCases;
 	}
 	
 	public int getX() {

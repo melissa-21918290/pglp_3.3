@@ -9,7 +9,7 @@ public class robot extends robotstatique {
 	}
 
 	public void tourne() {
-		if(direction.equals(Direction.NORD)) {
+		if(direction.equals(direction.NORD)) {
 			this.direction=direction.EST;
 		}
 		else if(direction.equals(direction.EST)) {
@@ -41,4 +41,4 @@ public class robot extends robotstatique {
 	
 }
 
-}
+
