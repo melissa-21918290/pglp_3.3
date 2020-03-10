@@ -1,11 +1,21 @@
 package TPjAVAexo3;
 
 public class robotstatique {
-	private position position;
+	protected Position position;
+	protected Direction direction;
 	
-	public robotstatique(position position){
-		this.position=position;
+	public rbotstatique(position p, direction d) {
+		this.position=p;
+		this.direction=d;
 	}
+	
+	public direction getdirection()
+		return this.direction;
 	}
-
-
+	
+	public Position getPosition() {
+		return this.position;
+	}
+	
+	public void avance() {
+		;

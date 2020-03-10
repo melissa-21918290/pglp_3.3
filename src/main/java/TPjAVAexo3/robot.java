@@ -2,26 +2,43 @@ package TPjAVAexo3;
 
 import java.util.ArrayList;
 
-public class robot {
-	private position position;
-	private direction direction;
+public class robot extends robotstatique {
 	
-	
-public robot(position position, direction direction){
-this.position=position;
-this.direction=direction;
-}
-
-/* **************** */ 
-
-public void tourne(){ /*tourne 1/4 de* tour*/}
-public void avance(){/*avance d'une case*/}
-
-private ArrayList<robot> robots=new ArrayList<robot>();
-public void avancer_tous(){
-	for (robot rob : robots){
-		rob.avance();
+	public robot(position p, direction d) {
+		super(p, d);
 	}
+
+	public void tourne() {
+		if(direction.equals(Direction.NORD)) {
+			this.direction=direction.EST;
+		}
+		else if(direction.equals(direction.EST)) {
+			this.direction=direction.SUD;
+		}
+		else if(direction.equals(direction.SUD)) {
+			this.direction=direction.OUEST;
+		}
+		else {
+			this.direction=direction.NORD;
+		}
+	}
+	
+	@Override
+	public void avance(){
+		if(direction.equals(direction.NORD)) {
+			this.position.deplaceY(1);
+		}
+		else if(direction.equals(direction.EST)) {
+			this.position.deplaceX(1);
+		}
+		else if(direction.equals(direction.SUD)) {
+			this.position.deplaceY(-1);
+		}
+		else {
+			this.position.deplaceX(-1);
+		}
+	}
+	
 }
 
 }
