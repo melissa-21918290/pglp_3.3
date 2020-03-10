@@ -1,17 +1,31 @@
 package TPjAVAexo3;
 
 public class position {
-	private int pox;
-	private int poy;
+	private int x;
+	private int y;
 	 
 	
 
-	public position (int pox, int poy){
-		this.pox=pox;
-		this.poy=poy; 
+	public position (int x, int y){
+		this.x=x;
+		this.y=y; 
 	}
 
-
+	protected void deplaceX(int nbCases) {
+		this.x=this.x+nbCase;
+	}
+	
+	protected void deplaceY(int nbCases) {
+		this.y=this.y+nbCase;
+	}
+	
+	public int getX() {
+		return this.x;
+	}
+	
+	public int getY() {
+		return this.y;
+	}
 
 	
 }
