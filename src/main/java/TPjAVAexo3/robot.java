@@ -1,6 +1,5 @@
 package TPjAVAexo3;
 
-import java.util.ArrayList;
 
 public class robot extends robotstatique {
 	

@@ -1,37 +1,33 @@
 package TPjAVAexo3;
 
-import java.awt.Robot;
 import static org.junit.Assert.assertEquals;
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+
+import org.junit.Test;
+
+import junit.framework.Assert;
+
+
 
 public class TestRobot {
 	
 	@Test
 	public void tourneTest() {
-		position p=new position(8,7);
-		direction d=direction.NORD;
-		robot R=new robot(p,d);
+		position pos=new position(7,8);
+		direction dir=direction.NORD;
+		robot R=new robot(pos,dir);
 		direction expected=direction.EST;
 		R.tourne();
 		
 		assertEquals(expected,R.getdirection());
 	}
 	
-	
+	 public void testAvance() {
+	        robot r = new robot(null, null);
+	        r.avance();
+	        position p = new position(1,2);
 
-	@Test
-	public void avanceTest()  {
-		position p=new position(8,7);
-		direction d=direction.NORD;
-		robot R=new robot(p,d);
-		position expected=new position(8,7);
-		R.avance();
-		
-		assertEquals(expected.getY(),R.getposition().getY());
-		assertEquals(expected.getX(),R.getposition().getX());
-		
-		
-		@Test 
-	}}
+	        Assert.assertTrue(p.getX() == r.getposition().getX());
+	        Assert.assertTrue(p.getY() == r.getposition().getY());
+	    }
+	
+}
